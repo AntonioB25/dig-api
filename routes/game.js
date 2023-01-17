@@ -1,6 +1,6 @@
 var express = require('express');
 //const { io } = require('../bin/www')
-const pgClient = require('../socketIO/socketServer')
+const pgClient = require('../database/pgClient')
 var currentGameId = require('../database/currentGameId')
 const {PythonShell} = require("python-shell");
 

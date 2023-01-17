@@ -3,7 +3,7 @@ const { Client } = require('pg')
 const connectionString = "postgres://zcyjtpnt:v9WrgFEIVCryDxRnFn2s5xrZpXuqhEvG@mel.db.elephantsql.com/zcyjtpnt";
 
 const pgClient = new Client({
-  connectionString: connectionString
+  connectionString
 });
 
 // const pgClient = new Client({

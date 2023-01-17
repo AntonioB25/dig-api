@@ -30,6 +30,13 @@ router.get('/gameId', async function(req, res, next){
 })
 
 
+router.get('/gameTest', async function(req, res, next){
+ 
+  var gameId = getRandomInt(MIN,MAX);  
+  
+  res.send({gameId})
+})
+
 /* GET check if game id is valid */
 router.get('/validate', function(req, res, next){
   var gameId = req.query.gameId;  

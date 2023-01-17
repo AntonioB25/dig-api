@@ -62,9 +62,9 @@ router.get('/prediction', async function(req, res, next){
   var attempt = req.query.attempt;
   var predictionPoints = 0;
 
-  await predict(predictionPoints, attempt).then(res =>{
-   predictionPoints = res
-  })
+  // await predict(predictionPoints, attempt).then(res =>{
+  //  predictionPoints = res
+  // })
 
   res.send({predictionPoints});
 })

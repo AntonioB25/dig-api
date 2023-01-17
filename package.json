@@ -1,0 +1,25 @@
+{
+  "name": "digitalno-obrazovanje",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "node ./api/index.js",
+    "live": "nodemon server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "morgan": "~1.9.1",
+    "node-postgres": "^0.6.2",
+    "pg": "^8.8.0",
+    "python-shell": "^3.0.1",
+    "socket.io": "^4.5.4"
+  }
+}

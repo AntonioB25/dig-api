@@ -11,12 +11,18 @@ import warnings
 def main(argv):
 
     attempt_to_predict = int(argv[0])
-    pg_connect = pg.connect(
-    host="localhost",
-    database="digobr",
-    user="postgres",
-    password="password",
-    port=5432)
+
+    connection_string = "postgres://zcyjtpnt:v9WrgFEIVCryDxRnFn2s5xrZpXuqhEvG@mel.db.elephantsql.com/zcyjtpnt"
+
+    # pg_connect = pg.connect(
+    # host="localhost",
+    # database="digobr",
+    # user="postgres",
+    # password="password",
+    # port=5432)
+
+    pg_connect = pg.connect(connection_string)
+
 
     df = pd.read_sql('select * from game_record', con=pg_connect)
 

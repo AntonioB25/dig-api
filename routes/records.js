@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     if (req.query.class || req.query.gameId) return next();
     const gameId = req.query.gameId;
 
-    pgClient.query('SELECT * FROM game_record', (error, results) => {
+    pgClient.query('SELECT * FROM game_record ORDER BY points DESC;', (error, results) => {
         if (error) {
             throw error
         }
@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
     if (req.query.class) return next();
     const gameId = req.query.gameId;
 
-    pgClient.query('SELECT * FROM game_record WHERE game_id=$1',[gameId], (error, results) => {
+    pgClient.query('SELECT * FROM game_record WHERE game_id=$1 ORDER BY points DESC',[gameId], (error, results) => {
         if (error) {
             throw error
         }
@@ -48,7 +48,7 @@ router.get('/', function(req, res, next) {
 router.get('/', function(req, res, next) {
     const className = req.query.class
 
-    pgClient.query('SELECT * FROM game_record WHERE class=$1',[className], (error, results) => {
+    pgClient.query('SELECT * FROM game_record WHERE class=$1 ORDER BY points DESC',[className], (error, results) => {
         if (error) {
             throw error
         }

@@ -1,5 +1,7 @@
 # Digitalno obrazovanje
 
+Server za aplikaciju iz predmeta Digitalno obrazovanje
+
 # Rute
 ##  /user
 
